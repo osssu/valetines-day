@@ -1,0 +1,159 @@
+body {
+    background-color: pink;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.final-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.heart {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    clip-path: polygon(50% 15%, 80% 0, 100% 20%, 100% 60%, 50% 100%, 0 60%, 0 20%, 20% 0);
+}
+
+.heart:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+
+@keyframes explode {
+    0% { transform: scale(0.5) translate(-50%, -50%); opacity: 0; }
+    50% { transform: scale(1.5) translate(-50%, -50%); opacity: 1; }
+    100% { transform: scale(1) translate(-50%, -50%); }
+}
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.back-arrow:hover {
+    transform: scale(1.1);
+}
+
+.valetine-submit {
+    background-color: #ff4d6d;
+    color: white;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+    margin-top: 15px;
+}
+
+
+
+
+/* Falling roses effect */
+@keyframes fall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.rose {
+    position: absolute;
+    width: 140px;
+    height: auto;
+    background: transparent;
+    animation: fall 5s linear infinite;
+    opacity: 1;
+}
+
+.rose:nth-child(1) { left: 2%; animation-duration: 6s; }
+.rose:nth-child(2) { left: 12%; animation-duration: 5s; }
+.rose:nth-child(3) { left: 22%; animation-duration: 6.5s; }
+.rose:nth-child(4) { left: 32%; animation-duration: 4.8s; }
+.rose:nth-child(5) { left: 42%; animation-duration: 5.5s; }
+.rose:nth-child(6) { left: 52%; animation-duration: 6.3s; }
+.rose:nth-child(7) { left: 62%; animation-duration: 5.2s; }
+.rose:nth-child(8) { left: 72%; animation-duration: 6.7s; }
+.rose:nth-child(9) { left: 82%; animation-duration: 5.4s; }
+.rose:nth-child(10) { left: 92%; animation-duration: 6s; }
+.rose:nth-child(11) { left: 10%; animation-duration: 7s; }
+.rose:nth-child(12) { left: 50%; animation-duration: 7.5s; }
+.rose:nth-child(13) { left: 75%; animation-duration: 6.8s; }
+.rose:nth-child(14) { left: 90%; animation-duration: 5.9s; }
+.rose:nth-child(15) { left: 30%; animation-duration: 6.6s; }
+
+/* Styling for the final message */
+#final-page h1 {
+    font-size: 150px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba(255, 0, 0, 0.7);
+}
+
+
+
+
+

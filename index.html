@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="start-page" class="container">
+        <div class="heart" onclick="startQuiz()">Click on me</div>
+    </div>
+
+    <div id="quiz-page" class="container hidden">
+        <h2>Pick an image to answer a question!</h2>
+        <div class="image-container">
+            <img src="image1.jpg" onclick="askQuestion(0)">
+            <img src="image2.jpg" onclick="askQuestion(1)">
+            <img src="image3.jpg" onclick="askQuestion(2)">
+            <img src="image4.jpg" onclick="askQuestion(3)">
+            <img src="image5.jpg" onclick="askQuestion(4)">
+            <img src="image6.jpg" onclick="askQuestion(5)">
+            <img src="image7.jpg" onclick="askQuestion(6)">
+            <img src="image8.jpg" onclick="askQuestion(7)">
+            <img src="image9.jpg" onclick="askQuestion(8)">
+            <img src="image10.jpg" onclick="askQuestion(9)">
+        </div>
+    </div>
+
+    <div id="question-page" class="container hidden">
+        <h2 id="question-text"></h2>
+        <input type="text" id="answer-box">
+        <button class="valetine-submit" onclick="checkAnswer()">Submit</button>
+        <p id="feedback"></p>
+    </div>
+
+    <div id="final-page" class="container hidden">
+       <h1>Will you be my Valentine?</h1>
+        <img src="rose.png" class="rose" style="left: 10%;" />
+<img src="rose.png" class="rose" style="left: 30%;" />
+<img src="rose.png" class="rose" style="left: 50%;" />
+<img src="rose.png" class="rose" style="left: 70%;" />
+<img src="rose.png" class="rose" style="left: 90%;" />
+
+    </div>
+</body>
+</html>
